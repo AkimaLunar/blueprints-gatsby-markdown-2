@@ -11,28 +11,27 @@
   "tasks": {
     "develop": {
       "name": "develop",
-      "command": "npm develop",
-      "runAtStart": false
+      "command": "npm develop"
     },
     "start": {
       "name": "start",
       "command": "npm start",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 8000
+      }
     },
     "build": {
       "name": "build",
-      "command": "npm run build",
-      "runAtStart": false
+      "command": "npm run build"
     },
     "serve": {
       "name": "serve",
-      "command": "npm run serve",
-      "runAtStart": false
+      "command": "npm run serve"
     },
     "clean": {
       "name": "clean",
-      "command": "npm run clean",
-      "runAtStart": false
+      "command": "npm run clean"
     },
     "eslint . --fix -c .eslintrc.js": {
       "name": "lint",
