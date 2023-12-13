@@ -2,10 +2,10 @@ import type { HeadFC, PageProps } from 'gatsby';
 import type { FC } from 'react';
 import * as React from 'react';
 
-const IndexPage: FC<PageProps> = () => {
-  // return <HomeLayout {...homeLayoutProps} />;
+import { HomeLayout } from '../layouts/home';
 
-  return <h1>Hello</h1>;
+const IndexPage: FC<PageProps> = () => {
+  return <HomeLayout title="Welcome!" leading="Get started with your new docsite." />;
 };
 
 export const Head: HeadFC = () => {

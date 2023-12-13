@@ -3,6 +3,7 @@ import { Divider } from '@microsoft/arbutus.divider';
 import { MarkList, MarkListItem } from '@microsoft/arbutus.mark-list';
 import { OrderedList, OrderedListItem } from '@microsoft/arbutus.ordered-list';
 import { Text as ArbutusText } from '@microsoft/arbutus.text';
+import { useSpaceStyles } from '@microsoft/arbutus.use-space-styles';
 import type { FC } from 'react';
 import * as React from 'react';
 import Markdown from 'react-markdown';
@@ -11,6 +12,8 @@ import { Image } from '../image';
 import type { MarkdownRendererProps } from './markdown-renderer.types';
 
 export const MarkdownRenderer: FC<MarkdownRendererProps> = ({ markdown }) => {
+  const space = useSpaceStyles();
+
   if (!markdown) {
     return null;
   }
@@ -19,32 +22,32 @@ export const MarkdownRenderer: FC<MarkdownRendererProps> = ({ markdown }) => {
     <Markdown
       components={{
         h1: ({ children }) => (
-          <ArbutusText as="h1" variant="jumbo" block>
+          <ArbutusText as="h1" variant="jumbo" block className={space.mt6}>
             {children}
           </ArbutusText>
         ),
         h2: ({ children }) => (
-          <ArbutusText as="h2" variant="title" block>
+          <ArbutusText as="h2" variant="title" block className={space.mt6}>
             {children}
           </ArbutusText>
         ),
         h3: ({ children }) => (
-          <ArbutusText as="h3" variant="subtitle" block>
+          <ArbutusText as="h3" variant="subtitle" block className={space.mt6}>
             {children}
           </ArbutusText>
         ),
         h4: ({ children }) => (
-          <ArbutusText as="h4" variant="headline" block>
+          <ArbutusText as="h4" variant="headline" block className={space.mt6}>
             {children}
           </ArbutusText>
         ),
         h5: ({ children }) => (
-          <ArbutusText as="h5" variant="leading" block>
+          <ArbutusText as="h5" variant="leading" block className={space.mt6}>
             {children}
           </ArbutusText>
         ),
         h6: ({ children }) => (
-          <ArbutusText as="h6" variant="caption" block>
+          <ArbutusText as="h6" variant="caption" block className={space.mt6}>
             {children}
           </ArbutusText>
         ),
