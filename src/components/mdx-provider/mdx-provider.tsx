@@ -8,7 +8,7 @@ import { useSpaceStyles } from '@microsoft/arbutus.use-space-styles';
 import type { FC, ReactNode } from 'react';
 import * as React from 'react';
 
-import { Grid } from '../grid';
+import { Image } from '../image';
 import { shortcodes } from './shortcodes';
 
 const BlueprintsH1: FC<{ children?: ReactNode }> = ({ children }) => (
@@ -85,6 +85,10 @@ const BlueprintsCode: FC<{ children?: ReactNode; className?: string }> = (props)
   );
 };
 
+const BlueprintsImg: FC<{ src?: string; alt?: string }> = ({ src = '', alt = '' }) => (
+  <Image isRounded src={src} alt={alt} />
+);
+
 const components = {
   h1: BlueprintsH1,
   h2: BlueprintsH2,
@@ -99,11 +103,10 @@ const components = {
   li: BlueprintsLi,
   hr: BlueprintsHr,
   code: BlueprintsCode,
+  img: BlueprintsImg,
   ...shortcodes,
 };
 
 export const MDXComponentsWrapper: FC<{ children?: ReactNode }> = ({ children }) => (
-  <MDXProvider components={components}>
-    <Grid>{children}</Grid>
-  </MDXProvider>
+  <MDXProvider components={components}>{children}</MDXProvider>
 );

@@ -17,13 +17,17 @@ const useGlobalStyles = makeStaticStyles({
   '*': {
     boxSizing: 'border-box',
   },
-  // This prevents the default link underline on the nav items, but should be removed when MainNavigation passes that
-  // style override to the Link component.
   a: {
     textDecoration: 'none',
   },
   body: {
     backgroundColor: tokens.colorNeutralBackground1,
+  },
+  figure: {
+    marginBlockStart: 0,
+    marginBlockEnd: 0,
+    marginInlineStart: 0,
+    marginInlineEnd: 0,
   },
 });
 
@@ -35,9 +39,5 @@ export const Theme: FC<{ children: ReactNode }> = ({ children }) => {
   useSegoeUI700();
   useGlobalStyles();
 
-  return (
-    <ThemeProvider>
-      {children}
-    </ThemeProvider>
-  );
+  return <ThemeProvider>{children}</ThemeProvider>;
 };

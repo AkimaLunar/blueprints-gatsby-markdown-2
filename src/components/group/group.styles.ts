@@ -13,7 +13,7 @@ export const useGroupVerticalAlignmentStyles = makeStyles({
   },
 });
 
-export const useHorizontalAlignmentStyles = makeStyles({
+export const useGroupHorizontalAlignmentStyles = makeStyles({
   left: {
     justifyContent: 'left',
   },
@@ -31,9 +31,20 @@ export const useHorizontalAlignmentStyles = makeStyles({
   },
 });
 
+export const useGroupSpacingStyles = makeStyles({
+  condensed: {
+    columnGap: tokens.spacingVerticalXS,
+  },
+  default: {
+    columnGap: tokens.spacingVerticalS,
+  },
+  wide: {
+    columnGap: tokens.spacingVerticalM,
+  },
+});
+
 export const useGroupStyles = makeStyles({
   root: {
     display: 'flex',
-    columnGap: tokens.spacingVerticalM,
   },
 });

@@ -105,6 +105,6 @@
     "./src/**/*",
     "./gatsby-browser.tsx",
     "./gatsby-config.ts",
-    "./gatsby-ssr.tsx"
-, "{mdx.frontmatter__slug}.tsx"  ]
+    "./gatsby-ssr.tsx",
+  ]
 }

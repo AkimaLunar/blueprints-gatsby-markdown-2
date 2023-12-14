@@ -2,23 +2,27 @@ import { mergeClasses } from '@griffel/react';
 import React from 'react';
 
 import {
+  useGroupHorizontalAlignmentStyles,
+  useGroupSpacingStyles,
   useGroupStyles,
   useGroupVerticalAlignmentStyles,
-  useHorizontalAlignmentStyles,
 } from './group.styles';
 import type { GroupProps } from './group.types';
 
 export const Group: React.FC<GroupProps> = ({
-  horizontalAlignment,
-  verticalAlignment,
   children,
+  horizontalAlignment,
+  spacing = 'default',
+  verticalAlignment,
 }) => {
   const classes = useGroupStyles();
   const verticalAlignmentClasses = useGroupVerticalAlignmentStyles();
-  const horizontalAlignmentClasses = useHorizontalAlignmentStyles();
+  const horizontalAlignmentClasses = useGroupHorizontalAlignmentStyles();
+  const spacingClasses = useGroupSpacingStyles();
 
   const rootClasses = mergeClasses(
     classes.root,
+    spacing && spacingClasses[spacing],
     verticalAlignment && verticalAlignmentClasses[verticalAlignment],
     horizontalAlignment && horizontalAlignmentClasses[horizontalAlignment],
   );

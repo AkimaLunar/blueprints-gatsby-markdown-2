@@ -1,5 +1,3 @@
-import { arbutusTokens } from '@microsoft/arbutus.theming';
-
 module.exports = {
   siteMetadata: {
     title: `Demo of Blueprints + Gatsby + Markdown`,
@@ -31,7 +29,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 980,
-              wrapperStyle: `border-radius: ${arbutusTokens.shape.borderRadius}}; overflow: hidden;`,
+              wrapperStyle: `border-radius: 1rem; overflow: hidden;`,
             },
           },
         ],

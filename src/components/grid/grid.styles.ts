@@ -20,4 +20,7 @@ export const useGridStyles = makeStyles({
   large: {
     gridTemplateColumns: 'repeat(auto-fill, minmax(24rem, 1fr))',
   },
+  main: {
+    marginBottom: tokens.spacingVerticalXXL,
+  },
 });
