@@ -1,0 +1,76 @@
+import BaseExample from '../../code-examples/component-1-base.example';
+import BASE_EXAMPLE_RAW from '../../code-examples/__raw__/component-1-base.raw';
+import { ExampleWrapper, } from '../../code-examples/wrapper';
+import MANIFEST from '../../__prop-docs__/';
+
+<Main>
+
+# Component One
+
+<LeadingText>This is a description of the component. Use this space to give the user a high level understanding on when to use this component.</LeadingText>
+
+<Group>
+  <ResourceChip actionIconName="link" logoName="figma" logoLabel="Figma" text="Component One UI Kit" onClick={() => alert('FigmaToolkit!')} />
+  <ResourceChip actionIconName="copy" text="@company/ui.component-1" onClick={() => alert('Package!')} />
+</Group>
+
+---
+
+## Anatomy
+
+This is a space to give the user a high level understanding of what makes up this component: what are the key elements, what are the key states, and what are the key behaviors.
+
+<Guidance
+  imageProps={{
+    src: 'https://via.placeholder.com/960x240.png',
+    alt: 'Placeholder image'
+  }}
+  legendListItems={[
+    {
+      heading: 'Key Element 1',
+      description: 'This is a description of the key element.'
+    },
+    {
+      heading: 'Key Element 2',
+      description: 'This is a description of the key element.'
+    },
+    {
+      heading: 'Key Element 3',
+      description: 'This is a description of the key element.'
+    }
+  ]}
+/>
+
+<Grid variant="two-columns">
+  <Grid as="figure">
+    ![Placeholder image](../../assets/demo-image-1.png)
+    <figcaption>
+      <Text block variant="caption">Guidance topic 1</Text>
+      <Text block>Write the guidance for this topic. Be brief, 3-4 sentences is ideal. Make sure that the guidance is targeted and actionable.</Text>
+    </figcaption>
+  </Grid>
+  <Grid as="figure">
+    ![Placeholder image](../../assets/demo-image-1.png)
+    <figcaption>
+      <Text block variant="caption">Guidance topic 1</Text>
+      <Text block>Write the guidance for this topic. Be brief, 3-4 sentences is ideal. Make sure that the guidance is targeted and actionable.</Text>
+    </figcaption>
+  </Grid>
+</Grid>
+
+## Variants and Examples
+
+### Base example
+
+<ComponentPreview
+  component={BaseExample}
+  wrapper={ExampleWrapper}
+  code={BASE_EXAMPLE_RAW}
+  codeLanguage="typescript"
+/>
+
+## Properties
+
+<PropTable propsDoc={MANIFEST['DemoComponent']} caption="DemoComponentProps"/>
+
+</Main>

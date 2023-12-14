@@ -8,6 +8,7 @@ import { makeNavigate } from '../../utilities';
 import { Footer } from '../footer';
 import { Header } from '../header';
 import { Logo as FluentLogo } from '../logo';
+import { MDXComponentsWrapper } from '../mdx-provider';
 import { Navigation } from '../navigation';
 import { useLogoStyles } from './shell.styles';
 import type { ShellProps } from './shell.types';
@@ -41,7 +42,7 @@ export const Shell: FC<ShellProps> = ({ children, location }) => {
       isHeroMode={isHome}
       onLogoClick={navigateHome}
     >
-      {children}
+      <MDXComponentsWrapper>{children}</MDXComponentsWrapper>
     </ArbutusShell>
   );
 };
