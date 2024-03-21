@@ -3,6 +3,7 @@ module.exports = {
     title: `Demo of Blueprints + Gatsby + Markdown`,
     siteUrl: `https://www.yourdomain.tld`,
   },
+  pathPrefix: process.env.PREFIX_PATHS ? 'blueprints-gatsby-markdown-2' : '',
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
