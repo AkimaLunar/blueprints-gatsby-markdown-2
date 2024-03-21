@@ -1,3 +1,4 @@
+import { BookmarkTile } from '@microsoft/arbutus.bookmark-tile';
 import { ComponentPreview } from '@microsoft/arbutus.component-preview';
 import { Guidance } from '@microsoft/arbutus.guidance';
 import { PropTable } from '@microsoft/arbutus.prop-table';
@@ -17,6 +18,7 @@ const LeadingText: FC<{ children?: ReactNode }> = ({ children }) => (
 );
 
 export const shortcodes = {
+  BookmarkTile,
   ComponentPreview,
   Grid,
   Group,

@@ -19,6 +19,7 @@
     "@fluentui/react-theme": "^9.1.16",
     "@griffel/react": "^1.5.19",
     "@mdx-js/react": "^2.3.0",
+    "@microsoft/arbutus.bookmark-tile": "^1.0.8",
     "@microsoft/arbutus.code-snippet": "^1.0.6",
     "@microsoft/arbutus.component-preview": "^1.1.7",
     "@microsoft/arbutus.divider": "1.0.4",
